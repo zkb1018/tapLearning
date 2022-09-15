@@ -4,19 +4,24 @@
  * @Author: zkb
  * @Date: 2022-06-14 15:05:54
  * @LastEditors: zkb
- * @LastEditTime: 2022-09-14 11:07:32
+ * @LastEditTime: 2022-09-15 09:12:39
  */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Head from './component/head/head';
 import Word from "./component/word/word"
+import Means from './component/means/means';
+import Timer from './component/options/timer/timer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Head />
     <Word word="function" />
+    <Means means="功能、作用、函数" />
+    <Timer />
   </React.StrictMode>
 );
 

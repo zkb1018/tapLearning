@@ -4,7 +4,7 @@
  * @Author: zkb
  * @Date: 2022-09-14 09:15:57
  * @LastEditors: zkb
- * @LastEditTime: 2022-09-14 14:23:03
+ * @LastEditTime: 2022-09-14 16:18:13
  */
 import './word.css'
 import React, { Component } from "react";
@@ -22,7 +22,7 @@ class Word extends Component {
     }
     listenKeyDown(e) {
 
-        if (this.state.wordArray[this.state.nowTapIndex] == e.key) {
+        if (this.state.wordArray[this.state.nowTapIndex] === e.key) {
             console.log("true")
             this.setState({ nowTapIndex: this.state.nowTapIndex + 1 })
 
@@ -35,13 +35,11 @@ class Word extends Component {
 
     }
     componentDidMount() {
-
-
     }
     render() {
         let wordArray = this.props.word.split("")
         return <div className="word_container" id='word_container'>{wordArray.map((word, index) => {
-            return <span className="word" key={index}>{word}</span>
+            return <span className={['word', index < this.state.nowTapIndex ? 'word_taped' : ''].join(' ')} key={index}>{word}</span>
         })}</div>
     }
 }
