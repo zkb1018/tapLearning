@@ -4,7 +4,7 @@
  * @Author: zkb
  * @Date: 2022-09-14 16:47:26
  * @LastEditors: zkb
- * @LastEditTime: 2022-09-15 09:26:23
+ * @LastEditTime: 2022-09-16 13:09:45
  */
 import React, { Component } from "react";
 class Timer extends Component {
@@ -31,10 +31,10 @@ class Timer extends Component {
         if (this.state.minues === 59) {
             this.setState({ minues: 0, hours: hours + 1 })
         }
-        this.setState({ timer: hours + ':' + minues + ':' + seconds })
+        this.setState({ timer: ('0' + hours).slice(-2) + ':' + ('0' + minues).slice(-2) + ':' + ('0' + seconds).slice(-2) })
     }
     render() {
-        return <span className="timer">{this.state.timer}</span>
+        return <span className="timer">累计时长：{this.state.timer}</span>
     }
     componentWillUnmount() {
         clearInterval(this.timer)

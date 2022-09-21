@@ -8,5 +8,9 @@
   font-weight: 600;
 }
 .word_container .word_taped {
-  color: #51e617;
+  color: #203bd1;
+}
+.word_container .playBtn {
+  width: 60px;
+  height: 60px;
 }
