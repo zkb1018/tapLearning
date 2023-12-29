@@ -3,10 +3,11 @@
  * @version: 
  * @Author: zkb
  * @Date: 2022-09-14 16:47:26
- * @LastEditors: zkb
- * @LastEditTime: 2022-09-16 13:09:45
+ * @LastEditors: KB
+ * @LastEditTime: 2023-12-28 21:23:16
  */
 import React, { Component } from "react";
+import "./timer.css"
 class Timer extends Component {
     constructor(props) {
         super(props)
@@ -34,7 +35,7 @@ class Timer extends Component {
         this.setState({ timer: ('0' + hours).slice(-2) + ':' + ('0' + minues).slice(-2) + ':' + ('0' + seconds).slice(-2) })
     }
     render() {
-        return <span className="timer">累计时长：{this.state.timer}</span>
+        return <span className="timer">练习时长：{this.state.timer}</span>
     }
     componentWillUnmount() {
         clearInterval(this.timer)

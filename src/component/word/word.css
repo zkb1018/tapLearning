@@ -1,14 +1,14 @@
 .word_container {
   margin: 0 auto;
   width: fit-content;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 .word_container .word {
   font-size: 60px;
   font-weight: 600;
 }
 .word_container .word_taped {
-  color: #203bd1;
+  color: #0020ca;
 }
 .word_container .playBtn {
   width: 60px;
