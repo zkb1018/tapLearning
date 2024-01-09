@@ -3,8 +3,8 @@
  * @version: 
  * @Author: zkb
  * @Date: 2022-06-14 15:05:54
- * @LastEditors: zkb
- * @LastEditTime: 2022-09-16 14:45:13
+ * @LastEditors: KB
+ * @LastEditTime: 2023-12-29 21:31:06
  */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -14,9 +14,10 @@ import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
+  <App />
 );
 
 // If you want to start measuring performance in your app, pass a function

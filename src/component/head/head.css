@@ -16,3 +16,19 @@
     height:30px;
     border-radius: 4px;
 }
+#keyBoardBtn{
+    color:#fff;
+    position: absolute;
+    right: 70px;
+    top:4px;
+    font-size: 22px;
+    text-align: center;
+    border: 2px solid #fff;
+    width: 30px;
+    height:30px;
+    border-radius: 4px;
+}
+#hideinput{
+    position: absolute;
+    left:-200px
+}

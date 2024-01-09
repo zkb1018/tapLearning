@@ -4,13 +4,15 @@
  * @Author: zkb
  * @Date: 2022-09-16 14:31:41
  * @LastEditors: KB
- * @LastEditTime: 2023-12-29 19:47:27
+ * @LastEditTime: 2024-01-08 19:43:57
  */
 import Head from './component/head/head';
 import Word from "./component/word/word"
 import Means from './component/means/means';
 import Pronounce from './component/pronounce/pronounce';
 import { Component } from 'react';
+
+const pronounAudio=new Audio()
 export default class App extends Component {
     constructor(props) {
         super(props)
@@ -44,12 +46,15 @@ export default class App extends Component {
     }
     pronoun = () => {
         // console.log(1)
-        let audio = document.getElementById("audio")
-        audio.src = this.state.pronounSrc
-        //audio.muted=false
-        audio.play()
+        // let audio = document.getElementById("audio")
+        // audio.src = this.state.pronounSrc
+        // audio.play()
+
+        pronounAudio.src=this.state.pronounSrc
+        pronounAudio.play()
     }
     getNewWord = () => {
+        document.getElementById("hideinput").value="";
         const random = parseInt(Math.random() * 4533) + 1
         const wordInfo = this.state.allWords[random]
         const transList = wordInfo.content.word.content.trans
@@ -72,13 +77,10 @@ export default class App extends Component {
                     return res.json()
             }).then((data) => {
                 const words = data.getWord
-                console.log(words)
                 this.setState({ allWords: [...words] }, () => {
                     console.log(this.state.allWords)
                     this.getNewWord();
                 })
-
-
             }).catch(error => {
                 console.log(error)
             })
@@ -99,7 +101,7 @@ export default class App extends Component {
                     return <Means key={index} means={item.pos + ',' + item.tranCn}></Means>
                 })}
 
-                <audio id="audio" src={this.state.pronounSrc} autoPlay ></audio>
+                {/* <audio id="audio" src={this.state.pronounSrc} autoPlay ></audio> */}
             </div>
 
         )

@@ -3,10 +3,9 @@
  * @Author: KB
  * @Date: 2023-12-29 20:06:12
  * @LastEditors: KB
- * @LastEditTime: 2023-12-29 20:40:15
+ * @LastEditTime: 2024-01-08 19:05:51
  */
 
-const a=require('./c-.mp3')
 const keyMaps=[
     "c-",
     "d-",
